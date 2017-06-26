@@ -1,3 +1,78 @@
-body{
+body {
   background-color: white;
+  .navbar {
+    .navbar-brand {
+      padding: 6px 15px;
+      img {
+        height: 40px;
+      }
+    }
+    #user-functions {
+      .button-search {
+        font-size: 20px;
+      }
+      .button-upload {
+        margin-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 10px;
+        background-color: #0099FF;
+        color: #fff;
+      }
+    }
+  }
+  @import "form_upload";
+  #sidebar_section {
+    .featured_items {
+      .featured_item_wrap {
+        margin-bottom: 16px;
+        &:hover .title {
+          color: #0099FF;
+        }
+        .image_wrap {
+          height: 100px;
+          width: 300px;
+          overflow: hidden;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          img {
+            max-width: 100%;
+          }
+        }
+        .title {
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  #main_section {
+    #list_gags {
+      .gag-item {
+        max-width: 500px;
+        .gag-title {
+          a {
+            &:hover {
+              color: #0099FF;
+            }
+            text-decoration: none;
+            color: black;
+          }
+          font-weight: bolder;
+        }
+        .gag-media-content {
+          border: 1px solid #ddd;
+          img {
+            width: 500px;
+            display: block;
+            max-width: 100%;
+            height: auto;
+          }
+        }
+        @import "counter";
+        @import "actions";
+      }
+    }
+  }
 }

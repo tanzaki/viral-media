@@ -1,0 +1,35 @@
+.actions{
+  .actions-in-left{
+    .btn{
+      margin-right:5px;
+      padding-left:14px;
+      padding-right:11px;
+      padding-top: 5px;
+      padding-bottom: 7px;
+      &.btn-like{
+      }
+      &.btn-unlike{
+
+      }
+      &.btn-comment{
+
+      }
+    }
+    .glyphicon{
+      color: #999;
+      font-size: 20px;
+    }
+  }
+  .actions-in-right{
+    color:white;
+    .btn:hover{
+      color:white;
+    }
+    .btn-share-facebook{
+      background-color: #3B5998;
+    }
+    .btn-share-twitter{
+      background-color: #BD081C;
+    }
+  }
+}

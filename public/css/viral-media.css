@@ -1,4 +1,105 @@
 body {
   background-color: white; }
+  body .navbar .navbar-brand {
+    padding: 6px 15px; }
+    body .navbar .navbar-brand img {
+      height: 40px; }
+  body .navbar #user-functions .button-search {
+    font-size: 20px; }
+  body .navbar #user-functions .button-upload {
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    background-color: #0099FF;
+    color: #fff; }
+  body #form-upload .forms form .btn-submit {
+    background-color: #0099FF;
+    border: 1px solid #0099FF; }
+    body #form-upload .forms form .btn-submit:hover {
+      background-color: #33adff; }
+  body #form-upload .buttons-switch-form .button-switch-form {
+    cursor: pointer;
+    padding-top: 2em;
+    border: 1px solid #eee;
+    text-align: center;
+    padding-bottom: 7px; }
+    body #form-upload .buttons-switch-form .button-switch-form.active {
+      border: 1px solid #0099FF; }
+      body #form-upload .buttons-switch-form .button-switch-form.active .icon_box-text {
+        color: #0099FF; }
+    body #form-upload .buttons-switch-form .button-switch-form .icon {
+      display: inline-block;
+      height: 48px;
+      width: 48px; }
+    body #form-upload .buttons-switch-form .button-switch-form .icon_box-text {
+      text-align: center;
+      margin-top: 1em; }
+    body #form-upload .buttons-switch-form .button-switch-form.icon-box-choose_files .icon {
+      background: url(http://i.imgur.com/3sYWUup.png) no-repeat;
+      background-size: 150px; }
+    body #form-upload .buttons-switch-form .button-switch-form.icon-box-paste_image .icon {
+      background: url(http://i.imgur.com/3sYWUup.png) -76px 0 no-repeat;
+      background-size: 224px 82px; }
+    body #form-upload .buttons-switch-form .button-switch-form.icon-box-paste_video .icon {
+      background: url(http://i.imgur.com/3sYWUup.png) -124px 0 no-repeat;
+      background-size: 224px 82px; }
+    body #form-upload .buttons-switch-form .button-switch-form.icon-box-make_meme .icon {
+      background: url(http://i.imgur.com/3sYWUup.png) -172px 0 no-repeat;
+      background-size: 224px 82px;
+      width: 52px;
+      height: 42px; }
+  body #sidebar_section .featured_items .featured_item_wrap {
+    margin-bottom: 16px; }
+    body #sidebar_section .featured_items .featured_item_wrap:hover .title {
+      color: #0099FF; }
+    body #sidebar_section .featured_items .featured_item_wrap .image_wrap {
+      height: 100px;
+      width: 300px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.1); }
+      body #sidebar_section .featured_items .featured_item_wrap .image_wrap img {
+        max-width: 100%; }
+    body #sidebar_section .featured_items .featured_item_wrap .title {
+      text-decoration: none;
+      color: black;
+      font-weight: bold; }
+  body #main_section #list_gags .gag-item {
+    max-width: 500px; }
+    body #main_section #list_gags .gag-item .gag-title {
+      font-weight: bolder; }
+      body #main_section #list_gags .gag-item .gag-title a {
+        text-decoration: none;
+        color: black; }
+        body #main_section #list_gags .gag-item .gag-title a:hover {
+          color: #0099FF; }
+    body #main_section #list_gags .gag-item .gag-media-content {
+      border: 1px solid #ddd; }
+      body #main_section #list_gags .gag-item .gag-media-content img {
+        width: 500px;
+        display: block;
+        max-width: 100%;
+        height: auto; }
+    body #main_section #list_gags .gag-item .counts {
+      margin: 1em 0; }
+      body #main_section #list_gags .gag-item .counts .points a, body #main_section #list_gags .gag-item .counts .comments a {
+        color: #999; }
+    body #main_section #list_gags .gag-item .actions .actions-in-left .btn {
+      margin-right: 5px;
+      padding-left: 14px;
+      padding-right: 11px;
+      padding-top: 5px;
+      padding-bottom: 7px; }
+    body #main_section #list_gags .gag-item .actions .actions-in-left .glyphicon {
+      color: #999;
+      font-size: 20px; }
+    body #main_section #list_gags .gag-item .actions .actions-in-right {
+      color: white; }
+      body #main_section #list_gags .gag-item .actions .actions-in-right .btn:hover {
+        color: white; }
+      body #main_section #list_gags .gag-item .actions .actions-in-right .btn-share-facebook {
+        background-color: #3B5998; }
+      body #main_section #list_gags .gag-item .actions .actions-in-right .btn-share-twitter {
+        background-color: #BD081C; }
 
 /*# sourceMappingURL=viral-media.css.map */

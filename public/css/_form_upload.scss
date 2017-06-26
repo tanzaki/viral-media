@@ -1,0 +1,67 @@
+#form-upload {
+  .forms {
+    form{
+      .title {
+
+      }
+      .btn-submit {
+        &:hover{
+          background-color: #33adff;
+        }
+        background-color: #0099FF;
+        border: 1px solid #0099FF;
+      }
+    }
+  }
+
+  .buttons-switch-form {
+    .button-switch-form {
+      cursor: pointer;
+      padding-top: 2em;
+      border: 1px solid #eee;
+      text-align: center;
+      padding-bottom: 7px;
+      &.active {
+        border: 1px solid #0099FF;
+        .icon_box-text {
+          color: #0099FF;
+        }
+      }
+      .icon {
+        display: inline-block;
+        height: 48px;
+        width: 48px;
+      }
+      .icon_box-text {
+        text-align: center;
+        margin-top: 1em;
+      }
+      &.icon-box-choose_files {
+        .icon {
+          background: url(http://i.imgur.com/3sYWUup.png) no-repeat;
+          background-size: 150px;
+        }
+      }
+      &.icon-box-paste_image {
+        .icon {
+          background: url(http://i.imgur.com/3sYWUup.png) -76px 0 no-repeat;
+          background-size: 224px 82px;
+        }
+      }
+      &.icon-box-paste_video {
+        .icon {
+          background: url(http://i.imgur.com/3sYWUup.png) -124px 0 no-repeat;
+          background-size: 224px 82px;
+        }
+      }
+      &.icon-box-make_meme {
+        .icon {
+          background: url(http://i.imgur.com/3sYWUup.png) -172px 0 no-repeat;
+          background-size: 224px 82px;
+          width: 52px;
+          height: 42px;
+        }
+      }
+    }
+  }
+}

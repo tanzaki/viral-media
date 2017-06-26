@@ -11,13 +11,13 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="{{ asset('css/viral-media.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->
@@ -30,18 +30,31 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        <img src="http://i.imgur.com/7vPWkod.png" alt="">
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li class="active"><a href="#">Hot</a></li>
+                        <li><a href="#">Trending</a></li>
+                        <li><a href="#">Fresh</a></li>
+                        <li><a href="#">TV</a></li>
+                        <li><a href="#">NSWF</a></li>
+                        <li><a href="#">GIF</a></li>
+                        <li><a href="#">WTF</a></li>
+                        <li><a href="#">Gamers Unite</a></li>
+                        <li><a href="#">NSFW Clothing</a></li>
+                        <li><a href="#">Get Our App!</a></li>
+                        <li><a href="#">Video</a></li>
+                        <li><a href="#">Hey man</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
+                        <li><a class="button-search" href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                        <li><a class="button-upload" href="#" type="button" data-toggle="modal" data-target="#myModal"> + Upload</a></li>
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
