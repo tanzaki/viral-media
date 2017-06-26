@@ -87,8 +87,40 @@
 
         @yield('content')
     </div>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="form-upload">
+                        <div class="row buttons-switch-form"></div>
+                        <hr>
+                        <div class="forms">
+                            <form method="post" role="form" enctype="multipart/form-data">
+                                <h3 class="title"></h3>
+                                <div class="form-group">
+                                    <label for="media_input"></label>
+                                    <input type="text" class="form-control" name="user_file_media" id="media_input"
+                                           placeholder="https://">
+                                </div>
+                                <div class="pull-right">
+                                    <button type="submit" class="btn btn-default btn-cancel" data-dismiss="modal"></button>
+                                    <button type="submit" class="btn btn-primary btn-submit"></button>
+                                </div>
+                                <div style="clear: both;"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/viral-media.js') }}"></script>
 </body>
 </html>
