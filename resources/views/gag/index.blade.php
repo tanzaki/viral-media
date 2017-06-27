@@ -66,7 +66,13 @@ HTML;
                         foreach ($articles as $article) {
                             $media_html = '<div></div>';// default html
                             if ($article->type === 'image') {
-                                $media_html = "";
+                                $media_html = "
+<div class='gag-media-content'>
+    <a href='#'>
+        <img src='{$article->media_source}'>
+    </a>
+</div>
+";
                             }
 
                             echo "<div class='gag-item'>";
