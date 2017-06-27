@@ -17,5 +17,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/', function(){
-    dd(request()->allFiles());
+    $allFiles = request()->allFiles();
+    var_export($allFiles);
 });
