@@ -74,43 +74,16 @@ HTML;
 </div>
 ";
                             }
-
+                            $counts_html = "";
+                            $actions_html = "";
                             echo "<div class='gag-item'>";
                             echo "<h4 class='gag-title'>
     <a href='#'>{$article->title}</a>
 </h4>";
                             echo $media_html;
                             echo "
-<div class='counts'>
-    <span class='points'>
-        <a href='#'>2,728 points</a>
-    </span>
-     ·
-    <span class='comments'>
-        <a href='#'>200 comments</a>
-    </span>
-</div>
-<div class='actions'>
-    <div class='actions-in-left pull-left'>
-        <span class='btn btn-default btn-like'>
-            <span class='glyphicon glyphicon-chevron-up'></span>
-        </span>
-        <span class='btn btn-default btn-unlike'>
-            <span class='glyphicon glyphicon-chevron-down'></span>
-        </span>
-        <span class='btn btn-default btn-comment'>
-            <span class='glyphicon glyphicon-comment'></span>
-        </span>
-    </div>
-    <div class='actions-in-right pull-right'>
-        <span class='btn btn-facebook btn-share-facebook'>
-            Facebook
-        </span>
-        <span class='btn btn-twitter btn-share-twitter'>
-            Twitter
-        </span>
-    </div>
-</div>
+$counts_html
+$actions_html
     <div style='clear:both'></div>
 ";
                             echo "
