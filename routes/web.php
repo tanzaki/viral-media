@@ -15,7 +15,7 @@ use App\Gag;
 use Illuminate\Http\UploadedFile;
 
 Route::get('/', function(){
-    echo 'Use Route::get when show data. Use Route::post when upload or send data';
+    dd(Gag::all());
 });
 
 Auth::routes();
