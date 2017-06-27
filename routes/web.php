@@ -14,7 +14,9 @@
 use App\Gag;
 use Illuminate\Http\UploadedFile;
 
-Route::get('/', 'HomeController@index');
+Route::get('/', function(){
+    echo 'Use Route::get when show data. Use Route::post when upload or send data';
+});
 
 Auth::routes();
 
