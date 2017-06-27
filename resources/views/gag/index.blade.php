@@ -106,17 +106,19 @@ HTML;
         </span>
     </div>
 </div>";
-                            echo "
-<div class='gag-item'>
-    <h4 class='gag-title'>
-        <a href='#'>{$article->title}</a>
+                            echo <<<HTML
+
+<div class="gag-item">
+    <h4 class="gag-title">
+        <a href="#">{$article->title}</a>
     </h4>
     $media_html
     $counts_html
     $actions_html
-    <div style='clear:both'></div>
+    <div style="clear:both"></div>
     <hr>
-</div>";
+</div>
+HTML;
                         }
                         ?>
                     </div>
