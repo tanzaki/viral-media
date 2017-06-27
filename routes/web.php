@@ -17,6 +17,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/', function(){
-    $allFiles = request()->allFiles();
-    var_export($allFiles['user_file_media']);
+//    https://laravel.com/docs/5.4/requests#files
+
 });
