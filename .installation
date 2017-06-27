@@ -4,3 +4,4 @@ php artisan make:auth
 //local try
 composer update
 php artisan migrate
+php artisan storage:link
