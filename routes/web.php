@@ -18,5 +18,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/', function(){
 //    https://laravel.com/docs/5.4/requests#files
-
+    dd(request()->user_file_media);
 });
