@@ -1,5 +1,1 @@
-<?php
-
-use App\Gag;
-
-dd(Gag::all());
+@extends('layouts.app')
