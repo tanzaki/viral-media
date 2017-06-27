@@ -100,6 +100,8 @@
                         <hr>
                         <div class="forms">
                             <form method="post" role="form" enctype="multipart/form-data">
+                                {{--https://laravel.com/docs/5.4/csrf--}}
+                                {{csrf_field()}}
                                 <h3 class="title"></h3>
                                 <div class="form-group">
                                     <label for="media_input"></label>
