@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Http\UploadedFile;
+
 Route::get('/', 'HomeController@index');
 
 Auth::routes();
@@ -18,5 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/', function(){
 //    https://laravel.com/docs/5.4/requests#files
-    dd(request()->user_file_media);
+    /** @var UploadedFile $user_file_media */
+    $user_file_media = request()->user_file_media;
+    dd($user_file_media);
 });
