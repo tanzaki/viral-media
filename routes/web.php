@@ -11,6 +11,7 @@
 |
 */
 
+use App\Gag;
 use Illuminate\Http\UploadedFile;
 
 Route::get('/', 'HomeController@index');
@@ -25,4 +26,7 @@ Route::post('/', function(){
     $path = $user_file_media->store('public/images');
     echo $path;
     //image was stored to 'storage/app/public/images' directory
+    $new_gag = new Gag();
+    $new_gag->save();
+    dd(Gag::all());
 });
