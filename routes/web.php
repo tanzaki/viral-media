@@ -28,7 +28,7 @@ Route::post('/', function(){
     $path = $user_file_media->store('public/images');
     //image was stored to 'storage/app/public/images' directory
     $new_gag = new Gag();
-    $new_gag->type = str_random(10);
+    $new_gag->type = 'image';
     $new_gag->media_source = $path;
     $new_gag->title = str_random(10);
     $new_gag->save();
