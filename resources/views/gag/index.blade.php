@@ -13,10 +13,11 @@
                         foreach ($articles as $article) {
                             $media_html = '<div></div>';// default html
                             if ($article->type === 'image') {
+                                $media_source = url('/').Storage::url($article->media_source);
                                 $media_html = "
 <div class='gag-media-content'>
     <a href='#'>
-        <img src='{$article->media_source}'>
+        <img src='{$media_source}'>
     </a>
 </div>
 ";
