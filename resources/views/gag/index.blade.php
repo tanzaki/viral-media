@@ -64,20 +64,15 @@
 HTML;
                         $articles = (json_decode($articles_json));
                         foreach ($articles as $article) {
+                            $media_html = '<div></div>';// default html
+                            if ($article->type === 'image') {
+                                $media_html = "";
+                            }
+
                             echo "<div class='gag-item'>";
                             echo "<h4 class='gag-title'>
     <a href='#'>{$article->title}</a>
 </h4>";
-                            $media_html = '<div></div>';// default html
-                            if ($article->type === 'image') {
-                                $media_html = "
-<div class='gag-media-content'>
-    <a href='#'>
-        <img src='{$article->media_source}'>
-    </a>
-</div>
-";
-                            }
                             echo $media_html;
                             echo "
 <div class='counts'>
