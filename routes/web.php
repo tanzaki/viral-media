@@ -22,5 +22,7 @@ Route::post('/', function(){
 //    https://laravel.com/docs/5.4/requests#files
     /** @var UploadedFile $user_file_media */
     $user_file_media = request()->user_file_media;
-    dd($user_file_media);
+    $path = $user_file_media->store('public/images');
+    echo $path;
+    //image was stored to 'storage/app/public/images' directory
 });
