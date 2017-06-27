@@ -8,61 +8,8 @@
 
                         <!-- using short-code `lorem` for generate random, simply, dummy text -->
                         <?php
-                        $articles_json = <<<HTML
-                [
-  {
-    "title": "Mexican Government Teams Up With Leonardo DiCaprio In Last-Ditch Effort To Save Vaquita",
-    "type": "image",
-    "media_source": "https:\/\/miscmedia-9gag-fun.9cache.com\/images\/long-post-cover\/37558474_1497853797.8644_Nuga5E_460c.jpg"
-  },
-  {
-    "title": "Haha, joke&#039;s on you",
-    "type": "image",
-    "media_source": "https:\/\/img-9gag-fun.9cache.com\/photo\/aeeKddB_460s.jpg"
-  },
-  {
-    "title": "After all this time, this is still my favorite game ending.",
-    "type": "image",
-    "media_source": "https:\/\/img-9gag-fun.9cache.com\/photo\/awQNwxy_460s.jpg"
-  },
-  {
-    "title": "Just end it all ready",
-    "type": "image",
-    "media_source": "https:\/\/img-9gag-fun.9cache.com\/photo\/aMAeq9R_460s.jpg"
-  },
-  {
-    "title": "Love it",
-    "type": "image",
-    "media_source": "https:\/\/img-9gag-fun.9cache.com\/photo\/am2qVg2_460s.jpg"
-  },
-  {
-    "title": "Grandma, there&#039;s a virus in my laptop!",
-    "type": "image",
-    "media_source": "https:\/\/img-9gag-fun.9cache.com\/photo\/aY4j9Lq_460s.jpg"
-  },
-  {
-    "title": "Intrigued, tell me more!",
-    "type": "image",
-    "media_source": "https:\/\/img-9gag-fun.9cache.com\/photo\/ar51qX6_460s.jpg"
-  },
-  {
-    "title": "9gag comments are gold",
-    "type": "image",
-    "media_source": "https:\/\/img-9gag-fun.9cache.com\/photo\/aoOm69e_460s_v1.jpg"
-  },
-  {
-    "title": "Finals start tomorrow :(",
-    "type": "image",
-    "media_source": "https:\/\/img-9gag-fun.9cache.com\/photo\/agYrWYW_460s.jpg"
-  },
-  {
-    "title": "How to start a match of Battlefield 1",
-    "type": "image",
-    "media_source": "https:\/\/img-9gag-fun.9cache.com\/photo\/aDzRN79_460s.jpg"
-  }
-]
-HTML;
-                        $articles = (json_decode($articles_json));
+                        use App\Gag;
+                        $articles = Gag::latest()->get();
                         foreach ($articles as $article) {
                             $media_html = '<div></div>';// default html
                             if ($article->type === 'image') {
@@ -126,7 +73,6 @@ HTML;
                 <div class="col-sm-4" id="sidebar_section">
                     <div class="featured_items">
                         <?php
-                        shuffle($articles);
                         foreach ($articles as $article) {
                             $media_html = <<<HTML
                     <img src="{$article->media_source}" alt="">
