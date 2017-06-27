@@ -15,7 +15,7 @@ use App\Gag;
 use Illuminate\Http\UploadedFile;
 
 Route::get('/', function(){
-    dd(Gag::all());
+    return view('gag.index');
 });
 
 Auth::routes();
