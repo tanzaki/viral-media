@@ -17,5 +17,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/', function(){
+    dd([
+        'item 1',
+        'item 2',
+    ]);
     echo 'Received data.';
 });
