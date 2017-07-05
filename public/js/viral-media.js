@@ -78,7 +78,8 @@ jQuery(function ($) {
 });
 jQuery(function ($) {
     var gags = $('.gag-item');
-    console.log(gags);
-    gags.click(function () {
+    gags.each(function () {
+        var $gag = $(this);
+        console.log($gag);
     })
 });
