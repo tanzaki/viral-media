@@ -56,7 +56,7 @@
 </div>";
                             echo <<<HTML
 
-<div class="gag-item">
+<div class="gag-item" data-id="{$article->id}">
     <h4 class="gag-title">
         <a href="#">{$article->title}</a>
     </h4>
