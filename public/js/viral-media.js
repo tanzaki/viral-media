@@ -78,4 +78,5 @@ jQuery(function ($) {
 });
 jQuery(function ($) {
     var gags = $('.gag-item');
+    console.log(gags);
 });
