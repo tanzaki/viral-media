@@ -80,10 +80,5 @@ jQuery(function ($) {
     var gags = $('.gag-item');
     console.log(gags);
     gags.click(function () {
-        var $gag = $(this);
-        console.log($gag.attr('class'));
-
-        var gag_id = $gag.data('id');
-        console.log(gag_id);
     })
 });
