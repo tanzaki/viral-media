@@ -79,5 +79,7 @@ jQuery(function ($) {
 jQuery(function ($) {
     var gags = $('.gag-item');
     console.log(gags);
-    gags.css('border','1px solid #ddd');
+    gags.click(function () {
+        alert('JS run this function when you click to .gag-item');
+    })
 });
