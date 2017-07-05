@@ -77,5 +77,5 @@ jQuery(function ($) {
     });
 });
 jQuery(function ($) {
-    //do something here after browser loaded page done
+    var gags = $('.gag-item');
 });
