@@ -32,5 +32,5 @@ Route::post('/', function(){
     $new_gag->media_source = $path;
     $new_gag->title = str_random(10);
     $new_gag->save();
-    dd(Gag::all());
+    return redirect('/');
 });
