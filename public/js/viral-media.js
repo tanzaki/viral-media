@@ -80,6 +80,7 @@ jQuery(function ($) {
     var gags = $('.gag-item');
     console.log(gags);
     gags.click(function () {
-        alert('JS run this function when you click to .gag-item');
+        var $gag = $(this);
+        console.log($gag);
     })
 });
