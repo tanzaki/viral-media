@@ -76,3 +76,6 @@ jQuery(function ($) {
         switch_form_create_media('choose_files');
     });
 });
+jQuery(function ($) {
+    //do something here after browser loaded page done
+});
