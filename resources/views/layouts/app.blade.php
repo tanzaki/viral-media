@@ -37,6 +37,15 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
+                        <?php
+                        $all_tags = \App\Tag::all();
+                        if($all_tags->isEmpty()){
+                            echo "<li><a href='#'>Tags empty</a></li>";
+                        }
+                        foreach ($all_tags as $tag){
+                            echo "<li><a href='#{$tag->id}'>{$tag->name}</a></li>";
+                        }
+                        ?>
                         <li class="active"><a href="#">Hot</a></li>
                         <li><a href="#">Trending</a></li>
                         <li><a href="#">Fresh</a></li>
