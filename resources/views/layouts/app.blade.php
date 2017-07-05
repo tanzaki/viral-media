@@ -46,18 +46,6 @@
                             echo "<li><a href='#{$tag->id}'>{$tag->name}</a></li>";
                         }
                         ?>
-                        <li class="active"><a href="#">Hot</a></li>
-                        <li><a href="#">Trending</a></li>
-                        <li><a href="#">Fresh</a></li>
-                        <li><a href="#">TV</a></li>
-                        <li><a href="#">NSWF</a></li>
-                        <li><a href="#">GIF</a></li>
-                        <li><a href="#">WTF</a></li>
-                        <li><a href="#">Gamers Unite</a></li>
-                        <li><a href="#">NSFW Clothing</a></li>
-                        <li><a href="#">Get Our App!</a></li>
-                        <li><a href="#">Video</a></li>
-                        <li><a href="#">Hey man</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
