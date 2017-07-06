@@ -72,6 +72,15 @@ class GagController extends Controller
         //
     }
 
+    public function like(Gag $gag)
+    {
+        //copy from action 'edit'
+        $gag->likes_count = $gag->likes_count + 1;
+        $gag->save();
+        return [
+            'likes_count' => $gag->likes_count
+        ];
+    }
     /**
      * Remove the specified resource from storage.
      *
