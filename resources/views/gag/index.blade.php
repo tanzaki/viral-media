@@ -75,8 +75,9 @@ HTML;
                     <div class="featured_items">
                         <?php
                         foreach ($articles as $article) {
+                            $media_source = url('/').Storage::url($article->media_source);
                             $media_html = <<<HTML
-                    <img src="{$article->media_source}" alt="">
+                    <img src="{$media_source}" alt="">
 HTML;
                             echo <<<HTML
                     <div class="featured_item_wrap">
