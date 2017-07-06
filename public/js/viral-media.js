@@ -83,6 +83,10 @@ jQuery(function ($) {
         $gag.find('.btn-like').click(function () {
             var $btn = $button = $(this);
             $btn.toggleClass('btn-status-liked');
+            var gag_id = $gag.data('id');
+            var url_to_like_this_gag = PUBLIC_URL+'/gag/'+gag_id+'/like';
+            $.ajax(url_to_like_this_gag);
+            alert('Liked this Gag. Data was saved to database. Refresh browser to see result.');
         });
     })
 });
