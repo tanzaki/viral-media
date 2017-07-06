@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Gag;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,6 +25,6 @@ class HomeController extends Controller
     public function index()
     {
         $gag_id = \request()->route('gag');
-        echo $gag_id;
+        echo Gag::find($gag_id);
     }
 }
