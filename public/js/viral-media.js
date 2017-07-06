@@ -81,7 +81,7 @@ jQuery(function ($) {
     gags.each(function () {
         var $gag = $(this);
         $gag.find('.btn-like').click(function () {
-            alert('You clicked button like');
+            alert('You clicked button like'+'. Gag with id = '+$gag.data('id'));
         });
     })
 });
