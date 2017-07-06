@@ -23,6 +23,8 @@ class HomeController extends Controller
         $gag = Gag::find($gag_id);
         $gag->likes_count = $gag->likes_count + 1;
         $gag->save();
-        echo $gag->likes_count;
+        return [
+            'likes_count' => $gag->likes_count
+        ];
     }
 }
