@@ -85,8 +85,12 @@ jQuery(function ($) {
             $btn.toggleClass('btn-status-liked');
             var gag_id = $gag.data('id');
             var url_to_like_this_gag = PUBLIC_URL+'/gag/'+gag_id+'/like';
-            $.ajax(url_to_like_this_gag);
-            alert('Liked this Gag. Data was saved to database. Refresh browser to see result.');
+            $
+                .ajax(url_to_like_this_gag)
+                .then(function (response) {
+                    console.log(response);
+                })
+            ;
         });
     })
 });
