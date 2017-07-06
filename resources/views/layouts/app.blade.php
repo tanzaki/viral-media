@@ -120,6 +120,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Latest compiled and minified JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        var PUBLIC_URL = <?php echo json_encode(url('/')) ?>;
+    </script>
     <script src="{{ asset('js/viral-media.js') }}"></script>
 </body>
 </html>
