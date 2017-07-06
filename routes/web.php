@@ -20,7 +20,7 @@ Route::get('/', function(){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/gag/{gag}/like', 'HomeController@index')->name('home');
 Route::post('/', function(){
 //    https://laravel.com/docs/5.4/requests#files
     /** @var UploadedFile $user_file_media */
