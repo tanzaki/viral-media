@@ -88,7 +88,8 @@ jQuery(function ($) {
             $
                 .ajax(url_to_like_this_gag)
                 .then(function (response) {
-                    console.log(response);
+                    var like_count = response.likes_count;
+                    $gag.find('.likes-count').text(like_count);
                 })
             ;
         });

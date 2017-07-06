@@ -25,7 +25,11 @@
                             $counts_html = "
 <div class='counts'>
     <span class='points'>
-        <a href='#'>{$article->likes_count} points</a>
+        <a href='#'>
+            <span class='likes-count'>
+                {$article->likes_count}
+            </span>
+         points</a>
     </span>
      ·
     <span class='comments'>
