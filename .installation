@@ -5,3 +5,4 @@ php artisan make:auth
 composer update
 php artisan migrate
 php artisan storage:link
+php artisan make:controller GagController --resource --model=Gag
