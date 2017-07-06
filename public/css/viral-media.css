@@ -89,7 +89,10 @@ body {
       padding-left: 14px;
       padding-right: 11px;
       padding-top: 5px;
-      padding-bottom: 7px; }
+      padding-bottom: 7px;
+      background: inherit; }
+      body #main_section #list_gags .gag-item .actions .actions-in-left .btn span {
+        vertical-align: middle; }
       body #main_section #list_gags .gag-item .actions .actions-in-left .btn.btn-like.btn-status-liked span {
         color: #0099ff; }
     body #main_section #list_gags .gag-item .actions .actions-in-left .glyphicon {

@@ -6,6 +6,10 @@
       padding-right:11px;
       padding-top: 5px;
       padding-bottom: 7px;
+      background: inherit;
+      span{
+        vertical-align: middle;
+      }
       &.btn-like{
         &.btn-status-liked{
           span{
