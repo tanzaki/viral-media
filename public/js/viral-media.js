@@ -81,7 +81,8 @@ jQuery(function ($) {
     gags.each(function () {
         var $gag = $(this);
         $gag.find('.btn-like').click(function () {
-            alert('Let send liked Gag.id to server. '+PUBLIC_URL);
+            var $btn = $button = $(this);
+            $btn.toggleClass('btn-status-liked');
         });
     })
 });
