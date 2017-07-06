@@ -80,6 +80,8 @@ jQuery(function ($) {
     var gags = $('.gag-item');
     gags.each(function () {
         var $gag = $(this);
-        console.log($gag.find('.btn-like'));
+        $gag.find('.btn-like').click(function () {
+            alert('You clicked button like');
+        });
     })
 });
