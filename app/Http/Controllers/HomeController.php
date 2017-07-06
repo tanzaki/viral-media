@@ -25,6 +25,9 @@ class HomeController extends Controller
     public function index()
     {
         $gag_id = \request()->route('gag');
-        echo Gag::find($gag_id);
+        $gag = Gag::find($gag_id);
+        $gag->likes_count = $gag->likes_count + 1;
+        $gag->save();
+        echo $gag->likes_count;
     }
 }
