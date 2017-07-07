@@ -77,8 +77,15 @@ class GagController extends Controller
     {
         /** @var User $user */
         $user = \Auth::user();
+        $user->votes()->attach($gag);
+        if (count($user->votes) > 0) {
+            $is_liked = true;
+        }else{
+            $is_liked = false;
+        }
         return [
             'user'=>$user,
+            'is_user_liked'=>$is_liked
         ];
     }
     /**
