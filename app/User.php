@@ -2,13 +2,14 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * Class User
  * @package App
- * @property array votes
+ * @property array|Collection votes
  */
 class User extends Authenticatable
 {
