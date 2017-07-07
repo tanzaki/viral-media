@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 /**
  * Class User
  * @package App
+ * @property array votes
  */
 class User extends Authenticatable
 {
@@ -30,6 +31,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function votes()
     {
         return $this->belongsToMany(Gag::class, 'user_votes');

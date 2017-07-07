@@ -75,6 +75,7 @@ class GagController extends Controller
 
     public function like(Gag $gag)
     {
+        /** @var User $user */
         $user = \Auth::user();
         return [
             'user'=>$user,
