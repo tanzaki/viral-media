@@ -9,6 +9,7 @@
                         <!-- using short-code `lorem` for generate random, simply, dummy text -->
                         <?php
                         use App\Gag;
+                        use App\User;
                         $articles = Gag::latest()->get();
                         foreach ($articles as $article) {
                             $media_html = '<div></div>';// default html
@@ -36,10 +37,15 @@
         <a href='#'>200 comments</a>
     </span>
 </div>";
+                            if(Auth::user()->votes->contains($article)){
+                                $classActive = 'btn-status-liked';
+                            }else{
+                                $classActive = '';
+                            }
                             $actions_html = "
 <div class='actions'>
     <div class='actions-in-left pull-left'>
-        <span class='btn btn-default btn-like'>
+        <span class='btn btn-default btn-like {$classActive}'>
             <span class='glyphicon glyphicon-chevron-up'></span>
         </span>
         <span class='btn btn-default btn-unlike'>
