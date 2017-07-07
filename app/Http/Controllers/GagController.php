@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Gag;
+use App\User;
 use Illuminate\Http\Request;
 
 class GagController extends Controller
@@ -74,6 +75,10 @@ class GagController extends Controller
 
     public function like(Gag $gag)
     {
+        $user = \Auth::user();
+        return [
+            'user'=>$user,
+        ];
         //copy from action 'edit'
         $gag->likes_count = $gag->likes_count + 1;
         $gag->save();
