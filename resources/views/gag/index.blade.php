@@ -48,7 +48,7 @@
         <span class='btn btn-default btn-like {$classActive}'>
             <span class='glyphicon glyphicon-chevron-up'></span>
         </span>
-        <span class='btn btn-default btn-unlike'>
+        <span class='btn btn-default btn-dislike'>
             <span class='glyphicon glyphicon-chevron-down'></span>
         </span>
         <span class='btn btn-default btn-comment'>

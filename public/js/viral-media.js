@@ -80,8 +80,10 @@ jQuery(function ($) {
     var gags = $('.gag-item');
     gags.each(function () {
         var $gag = $(this);
-        $gag.find('.btn-like').click(function () {
+        $gag.find('.btn-like,.btn-dislike').click(function () {
             var $btn = $button = $(this);
+            var is_button_dislike = ($btn.hasClass('btn-dislike'));
+            console.log(is_button_dislike);
             $btn.toggleClass('btn-status-liked');
             var gag_id = $gag.data('id');
             var url_to_like_this_gag = PUBLIC_URL+'/gag/'+gag_id+'/like';
