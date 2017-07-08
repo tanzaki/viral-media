@@ -78,7 +78,9 @@ class GagController extends Controller
         /** @var User $user */
         $user = \Auth::user();
         $user->votes()->attach($gag);
-        if (count($user->votes) > 0) {
+        $gags_liked = $user->votes;
+        //let try to dump  die $gags_liked
+        if (count($gags_liked) > 0) {
             $is_liked = true;
         }else{
             $is_liked = false;
