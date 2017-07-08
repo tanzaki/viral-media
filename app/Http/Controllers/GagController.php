@@ -77,8 +77,8 @@ class GagController extends Controller
     {
         /** @var User $user */
         $user = \Auth::user();
-        $user->votes()->attach($gag);
-        $is_liked = $user->votes->contains($gag);
+        $user->upVotes()->attach($gag);
+        $is_liked = $user->upVotes->contains($gag);
         return [
             'user'=>$user,
             'is_user_liked'=>$is_liked,

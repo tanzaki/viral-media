@@ -37,7 +37,7 @@
         <a href='#'>200 comments</a>
     </span>
 </div>";
-                            if(Auth::user()->votes->contains($article)){
+                            if(Auth::user()->upVotes->contains($article)){
                                 $classActive = 'btn-status-liked';
                             }else{
                                 $classActive = '';
