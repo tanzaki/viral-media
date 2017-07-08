@@ -80,7 +80,9 @@ class GagController extends Controller
         $user->votes()->attach($gag);
         $gags_liked = $user->votes;
         //let try to dump  die $gags_liked
-        if (count($gags_liked) > 0) {
+        $count_gags_liked = count($gags_liked);
+        //let try to dump die $count_gags_liked
+        if ($count_gags_liked > 0) {
             $is_liked = true;
         }else{
             $is_liked = false;
