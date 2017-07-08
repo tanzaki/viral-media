@@ -73,6 +73,17 @@ class GagController extends Controller
         //
     }
 
+    public function dislike(Gag $gag) {
+        /** @var User $user */
+        $user = \Auth::user();
+        $user->downVotes()->attach($gag);
+        $is_disliked = $user->downVotes->contains($gag);
+        return [
+            'user'=>$user,
+            'is_user_disliked'=>$is_disliked,
+        ];
+    }
+
     public function like(Gag $gag)
     {
         /** @var User $user */

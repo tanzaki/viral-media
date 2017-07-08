@@ -93,7 +93,7 @@ body {
       background: inherit; }
       body #main_section #list_gags .gag-item .actions .actions-in-left .btn span {
         vertical-align: middle; }
-      body #main_section #list_gags .gag-item .actions .actions-in-left .btn.btn-like.btn-status-liked span {
+      body #main_section #list_gags .gag-item .actions .actions-in-left .btn.btn-like.btn-status-liked span, body #main_section #list_gags .gag-item .actions .actions-in-left .btn.btn-like.btn-status-disliked span, body #main_section #list_gags .gag-item .actions .actions-in-left .btn.btn-status-disliked.btn-status-liked span, body #main_section #list_gags .gag-item .actions .actions-in-left .btn.btn-status-disliked.btn-status-disliked span {
         color: #0099ff; }
     body #main_section #list_gags .gag-item .actions .actions-in-left .glyphicon {
       color: #999;

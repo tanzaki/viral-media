@@ -20,7 +20,8 @@ Route::get('/', function(){
 
 Auth::routes();
 
-Route::get('/gag/{gag}/like', 'GagController@like')->name('home');
+Route::get('/gag/{gag}/like', 'GagController@like')->name('like');
+Route::get('/gag/{gag}/dislike', 'GagController@dislike')->name('dislike');
 Route::post('/', function(){
 //    https://laravel.com/docs/5.4/requests#files
     /** @var UploadedFile $user_file_media */

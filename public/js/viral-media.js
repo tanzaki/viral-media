@@ -83,7 +83,6 @@ jQuery(function ($) {
         $gag.find('.btn-like,.btn-dislike').click(function () {
             var $btn = $button = $(this);
             var is_button_dislike = ($btn.hasClass('btn-dislike'));
-            console.log(is_button_dislike);
             var is_button_like = ($btn.hasClass('btn-like'));
             $btn.toggleClass('btn-status-liked');
             var gag_id = $gag.data('id');
@@ -93,6 +92,18 @@ jQuery(function ($) {
                     .ajax(url_to_like_this_gag)
                     .then(function (response) {
                         $btn.toggleClass('btn-status-liked', response.is_user_liked);
+                        var like_count = response.likes_count;
+                        $gag.find('.likes-count').text(like_count);
+                    })
+                ;
+            }
+
+            if (is_button_dislike) {
+                var url_to_dislike_this_gag = PUBLIC_URL + '/gag/' + gag_id + '/dislike';
+                $
+                    .ajax(url_to_dislike_this_gag)
+                    .then(function (response) {
+                        $btn.toggleClass('btn-status-disliked', response.is_user_disliked);
                         var like_count = response.likes_count;
                         $gag.find('.likes-count').text(like_count);
                     })

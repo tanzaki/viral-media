@@ -10,8 +10,8 @@
       span{
         vertical-align: middle;
       }
-      &.btn-like{
-        &.btn-status-liked{
+      &.btn-like,&.btn-status-disliked{
+        &.btn-status-liked,&.btn-status-disliked{
           span{
             color:#0099ff;
           }

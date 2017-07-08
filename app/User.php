@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * Class User
  * @package App
  * @property array|Collection upVotes
+ * @property array|Collection downVotes
  */
 class User extends Authenticatable
 {
@@ -33,6 +34,13 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function downVotes()
+    {
+        return $this->belongsToMany(Gag::class, 'user_down_votes');
+    }
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
