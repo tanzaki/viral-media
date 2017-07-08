@@ -58,4 +58,10 @@ class User extends Authenticatable
             'is_user_disliked'=>$is_disliked
         ];
     }
+
+    public function removeVotes(Gag $gag)
+    {
+        $this->downVotes()->sync([]);
+        $this->upVotes()->sync([]);
+    }
 }

@@ -76,6 +76,7 @@ class GagController extends Controller
     public function dislike(Gag $gag) {
         /** @var User $user */
         $user = \Auth::user();
+        $user->removeVotes($gag);
         $user->downVotes()->attach($gag);
         return $user->getVotes($gag);
     }
@@ -84,6 +85,7 @@ class GagController extends Controller
     {
         /** @var User $user */
         $user = \Auth::user();
+        $user->removeVotes($gag);
         $user->upVotes()->attach($gag);
         return $user->getVotes($gag);
     }
