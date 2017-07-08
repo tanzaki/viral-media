@@ -78,10 +78,6 @@ class GagController extends Controller
         /** @var User $user */
         $user = \Auth::user();
         $user->votes()->attach($gag);
-        $gags_liked = $user->votes;
-        //let try to dump  die $gags_liked
-        $count_gags_liked = count($gags_liked);
-        //let try to dump die $count_gags_liked
         $is_liked = $user->votes->contains($gag);
         return [
             'user'=>$user,
