@@ -89,6 +89,7 @@ jQuery(function ($) {
                 console.log(response);
                 $gag.find('.btn-like').toggleClass('btn-status-liked', response.is_user_liked);
                 $gag.find('.btn-dislike').toggleClass('btn-status-disliked', response.is_user_disliked);
+                $gag.find('.likes-count').text(response.gag_votes);
             };
 
             var url_to_reaction_this_gag;

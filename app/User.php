@@ -55,7 +55,8 @@ class User extends Authenticatable
         $is_disliked = $this->downVotes->contains($gag);
         return [
             'is_user_liked'=>$is_liked,
-            'is_user_disliked'=>$is_disliked
+            'is_user_disliked'=>$is_disliked,
+            'gag_votes'=>$gag->countVotes()
         ];
     }
 

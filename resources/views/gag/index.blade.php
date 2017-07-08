@@ -28,7 +28,7 @@
     <span class='points'>
         <a href='#'>
             <span class='likes-count'>
-                {$article->likes_count}
+                {$article->countVotes()}
             </span>
          points</a>
     </span>
