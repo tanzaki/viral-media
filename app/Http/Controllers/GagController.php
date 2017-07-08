@@ -82,14 +82,10 @@ class GagController extends Controller
         //let try to dump  die $gags_liked
         $count_gags_liked = count($gags_liked);
         //let try to dump die $count_gags_liked
-        if ($count_gags_liked > 0) {
-            $is_liked = true;
-        }else{
-            $is_liked = false;
-        }
+        $is_liked = $user->votes->contains($gag);
         return [
             'user'=>$user,
-            'is_user_liked'=>$is_liked
+            'is_user_liked'=>$is_liked,
         ];
     }
     /**
