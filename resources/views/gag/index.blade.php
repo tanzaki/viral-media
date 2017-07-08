@@ -42,13 +42,18 @@
                             }else{
                                 $classActive = '';
                             }
+                            if(Auth::user()->downVotes->contains($article)){
+                                $classDownVoteActive = 'btn-status-disliked';
+                            }else{
+                                $classDownVoteActive = '';
+                            }
                             $actions_html = "
 <div class='actions'>
     <div class='actions-in-left pull-left'>
         <span class='btn btn-default btn-like {$classActive}'>
             <span class='glyphicon glyphicon-chevron-up'></span>
         </span>
-        <span class='btn btn-default btn-dislike'>
+        <span class='btn btn-default btn-dislike {$classDownVoteActive}''>
             <span class='glyphicon glyphicon-chevron-down'></span>
         </span>
         <span class='btn btn-default btn-comment'>

@@ -61,7 +61,7 @@ class User extends Authenticatable
 
     public function removeVotes(Gag $gag)
     {
-        $this->downVotes()->sync([]);
-        $this->upVotes()->sync([]);
+        $this->downVotes()->wherePivot('gag_id',$gag->id)->sync([]);
+        $this->upVotes()->wherePivot('gag_id',$gag->id)->sync([]);
     }
 }
