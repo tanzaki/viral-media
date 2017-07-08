@@ -77,11 +77,7 @@ class GagController extends Controller
         /** @var User $user */
         $user = \Auth::user();
         $user->downVotes()->attach($gag);
-        $is_disliked = $user->downVotes->contains($gag);
-        return [
-            'user'=>$user,
-            'is_user_disliked'=>$is_disliked,
-        ];
+        return $user->getVotes($gag);
     }
 
     public function like(Gag $gag)
@@ -89,11 +85,7 @@ class GagController extends Controller
         /** @var User $user */
         $user = \Auth::user();
         $user->upVotes()->attach($gag);
-        $is_liked = $user->upVotes->contains($gag);
-        return [
-            'user'=>$user,
-            'is_user_liked'=>$is_liked,
-        ];
+        return $user->getVotes($gag);
     }
     /**
      * Remove the specified resource from storage.

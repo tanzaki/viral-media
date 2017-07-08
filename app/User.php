@@ -48,4 +48,14 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Gag::class, 'user_votes');
     }
+
+    public function getVotes(Gag $gag)
+    {
+        $is_liked = $this->upVotes->contains($gag);
+        $is_disliked = $this->downVotes->contains($gag);
+        return [
+            'is_user_liked'=>$is_liked,
+            'is_user_disliked'=>$is_disliked
+        ];
+    }
 }
