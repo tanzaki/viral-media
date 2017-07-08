@@ -88,7 +88,7 @@ jQuery(function ($) {
             $
                 .ajax(url_to_like_this_gag)
                 .then(function (response) {
-                    console.log(response);
+                    $btn.toggleClass('btn-status-liked', response.is_user_liked);
                     var like_count = response.likes_count;
                     $gag.find('.likes-count').text(like_count);
                 })
