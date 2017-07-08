@@ -87,6 +87,8 @@ jQuery(function ($) {
             var gag_id = $gag.data('id');
             var updateButtonsStatus = function (response) {
                 console.log(response);
+                $gag.find('.btn-like').toggleClass('btn-status-liked', response.is_user_liked);
+                $gag.find('.btn-dislike').toggleClass('btn-status-disliked', response.is_user_disliked);
             };
 
             var url_to_reaction_this_gag;
